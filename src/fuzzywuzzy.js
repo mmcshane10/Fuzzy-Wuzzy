@@ -37,7 +37,7 @@ export class FuzzyWuzzy {
     if (this.foodLevel <= 0) {
       return `Sorry, you killed ${this.name}.`
     } else {
-    this.foodLevel = 10;
+      this.foodLevel = 10;
     }
   }
 
