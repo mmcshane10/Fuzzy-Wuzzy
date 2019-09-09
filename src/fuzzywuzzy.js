@@ -25,4 +25,40 @@ export class FuzzyWuzzy {
     }, 5000);
   }
 
+  didYouGetEaten() {
+    if (this.foodLevel > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  feed() {
+    this.foodLevel = 10;
+  }
+
+  didFuzzyGetSad() {
+    if (this.moodLevel > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  pet() {
+    this.moodLevel = 20;
+  }
+
+  didFuzzyFallAsleep() {
+    if (this.energyLevel > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+
+  sleep() {
+    this. energyLevel = 20;
+  }
+
 }
