@@ -18,8 +18,28 @@ body {
 
 label {
   color: white;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+}
+
+button {
+  margin-bottom: 20px;
 }
 
 p {
   color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+}
+
+img {
+  height: 400px;
+  margin-left: 160px;
+  margin-top: 50px;
+}
+
+.begin-game {
+  display: none;
 }

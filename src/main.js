@@ -12,6 +12,8 @@ $(document).ready(function() {
     let newBear = new FuzzyWuzzy(bearName);
     console.log(newBear);
 
+    $('.begin-game').show();
+
     newBear.setHunger();
     newBear.setMood();
     newBear.setEnergy();
@@ -20,6 +22,23 @@ $(document).ready(function() {
       $('#food-display').text(newBear.foodLevel);
       $('#mood-display').text(newBear.moodLevel);
       $('#energy-display').text(newBear.energyLevel);
-    }, 1000);
+    }, 500);
+
+    $("button#feed-button").click(function(event) {
+      newBear.feed();
+    });
+
+    $("button#pet-button").click(function(event) {
+      newBear.pet();
+    });
+
+    $("button#sleep-button").click(function(event) {
+      newBear.sleep();
+    });
+
+    if (newBear.foodLevel === 0) {
+      alert("you lose idiot");
+    }
+
   });
 });

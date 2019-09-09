@@ -10,15 +10,21 @@
       <form id="bear-form">
         <label for="bearName">Enter a name for your bear:</label>
         <input type="text" id="inputted-name" name="bear-name" required>
-        <button type="submit" name="button">Start Game</button>
+        <button type="submit" class="btn btn-success btn-lg" name="button">Start Game</button>
       </form>
-      <button type="click" class="btn btn-success" name="feed">Feed Bear</button>
-      <button type="click" class="btn btn-success" name="pet">Pet Bear</button>
-      <button type="click" class="btn btn-success" name="sleep">Hibernate</button>
+
+      <div class="begin-game">
+
+      <button type="click" id="feed-button" class="btn btn-success" name="feed">Feed Bear</button>
+      <button type="click" id="pet-button" class="btn btn-success" name="pet">Pet Bear</button>
+      <button type="click" id="sleep-button" class="btn btn-success" name="sleep">Hibernate</button>
 
       <p>Food Level: <span id="food-display"></span></p>
       <p>Mood Level: <span id="mood-display"></span></p>
       <p>Energy Level: <span id="energy-display"></span></p>
+
+      <img src="http://clipartmag.com/images/koala-clipart-free-31.png" alt="picture of honeycomb">
+    </div>
     </div>
   </body>
 </html>

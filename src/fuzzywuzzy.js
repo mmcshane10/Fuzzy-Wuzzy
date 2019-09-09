@@ -10,19 +10,19 @@ export class FuzzyWuzzy {
   setHunger() {
     setInterval(() => {
       this.foodLevel--;
-    }, 5000);
+    }, 1000);
   }
 
   setMood() {
     setInterval(() => {
       this.moodLevel--;
-    }, 2000);
+    }, 750);
   }
 
   setEnergy() {
     setInterval(() => {
       this.energyLevel--;
-    }, 5000);
+    }, 2000);
   }
 
   didYouGetEaten() {
@@ -62,7 +62,7 @@ export class FuzzyWuzzy {
   }
 
   sleep() {
-    this. energyLevel = 20;
+    this.energyLevel = 20;
   }
 
 }
