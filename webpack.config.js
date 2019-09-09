@@ -1,7 +1,8 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 
 module.exports = {
   entry: './src/main.js',
@@ -17,7 +18,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'sudoku',
+      title: 'My Project',
       template: './src/index.html',
       inject: 'body'
     })
@@ -38,6 +39,17 @@ module.exports = {
           /spec/
         ],
         loader: "eslint-loader"
+      },
+      {
+        test: /\.js$/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
+        loader: "babel-loader",
+        options: {
+          presets: ['es2015']
+        }
       }
     ]
   }
