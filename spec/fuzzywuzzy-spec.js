@@ -47,6 +47,11 @@ describe('FuzzyWuzzy', function() {
     expect(honeycomb.didYouGetEaten()).toEqual(true);
   });
 
+  it('should not let you feed the bear after its food level hits 0', function() {
+    jasmine.clock().tick(50001);
+    expect(honeycomb.feed()).toEqual("Sorry, you killed Honey Comb.");
+  });
+
   it('should get very sad if the mood level drops below zero', function() {
     honeycomb.moodLevel = 0;
     expect(honeycomb.didFuzzyGetSad()).toEqual(true);

@@ -34,7 +34,11 @@ export class FuzzyWuzzy {
   }
 
   feed() {
+    if (this.foodLevel <= 0) {
+      return `Sorry, you killed ${this.name}.`
+    } else {
     this.foodLevel = 10;
+    }
   }
 
   didFuzzyGetSad() {
