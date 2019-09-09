@@ -43,3 +43,8 @@ img {
 .begin-game {
   display: none;
 }
+
+.game-over {
+  display: none;
+  margin-top: 80px;
+}
