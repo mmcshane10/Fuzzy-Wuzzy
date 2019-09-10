@@ -8,8 +8,15 @@ $(document).ready(function() {
   $("form#bear-form").submit(function(event) {
     event.preventDefault();
 
-    $('form#bear-form').trigger("reset");
 
+    let animalType = $('#difficulty').val();
+    console.log(animalType);
+    let animalName = $('#inputted-name').val();
+    console.log(animalName);
+    let newBear = new FuzzyWuzzy(animalType, animalName);
+    console.log(newBear);
+
+    $('form#bear-form').trigger("reset");
     let request = new XMLHttpRequest();
     const url = 'http://api.giphy.com/v1/gifs/random?api_key=m9fH4jBmiZbnscx9MUlcSn6lXL4ABkMp';
 
@@ -25,13 +32,8 @@ $(document).ready(function() {
 
     const getGifs = function (response) {
       $('#die-gif').html(`<img src=${response.data.images.original.url}>`);
-      console.log(response);
     }
 
-
-    let bearName = $('#inputted-name').val();
-    let newBear = new FuzzyWuzzy(bearName);
-    console.log(newBear);
 
     $('.begin-game').show();
     $('.game-over').hide();

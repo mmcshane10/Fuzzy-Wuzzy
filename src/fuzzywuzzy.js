@@ -1,6 +1,7 @@
 export class FuzzyWuzzy {
 
-  constructor(name) {
+  constructor(animal, name) {
+    this.animal = animal;
     this.name = name;
     this.foodLevel = 10;
     this.moodLevel = 20;
@@ -8,21 +9,31 @@ export class FuzzyWuzzy {
   }
 
   setHunger() {
+    let interval;
+    if (this.animal === "Squirrel") {
+      interval = 2000;
+    } else if (this.animal === "Bear") {
+      interval = 1000;
+    } else if (this.animal === "Fox") {
+      interval = 500;
+    } else {
+      interval = 10;
+    }
     setInterval(() => {
       this.foodLevel--;
-    }, 1000);
+    }, interval);
   }
 
   setMood() {
     setInterval(() => {
       this.moodLevel--;
-    }, 750);
+    }, 500);
   }
 
   setEnergy() {
     setInterval(() => {
       this.energyLevel--;
-    }, 2000);
+    }, 1000);
   }
 
   didYouGetEaten() {
