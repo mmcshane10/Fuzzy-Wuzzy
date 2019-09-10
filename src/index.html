@@ -1,36 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap" rel="stylesheet">
-    <title>Hungry Sleepy, Bears</title>
-  </head>
-  <body>
-    <div class="container">
-      <h1>Bearagotchi</h1>
-      <form id="bear-form">
-        <label for="bearName">Enter a name for your bear:</label>
-        <input type="text" id="inputted-name" name="bear-name" required>
-        <button type="submit" class="btn btn-success btn-lg" name="button">Start Game</button>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700&display=swap" rel="stylesheet">
+  <title>Hungry Sleepy, Bears</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Bearagotchi</h1>
+    <form id="bear-form">
+      <label for="bearName" id="name-label">Enter A Name For Your Animal:</label>
+      <input type="text" id="inputted-name" name="animal-name" required>
+      <label for="animal">Choose Difficulty Level:</label>
+      <select id="difficulty" required>
+        <option value="" selected disabled>Choose here</option>
+        <option value="Squirrel">Easy</option>
+        <option value="Bear">Moderate</option>
+        <option value="Fox">Hard</option>
+        <option value="Squid">Impossible</option>
+      </select>
+        <button type="submit" class="btn btn-success" name="button">Start Game</button>
       </form>
 
       <div class="begin-game">
 
-      <button type="click" id="feed-button" class="btn btn-success" name="feed">Feed Bear</button>
-      <button type="click" id="pet-button" class="btn btn-success" name="pet">Pet Bear</button>
-      <button type="click" id="sleep-button" class="btn btn-success" name="sleep">Hibernate</button>
+        <button type="click" id="feed-button" class="btn btn-success" name="feed">Feed Bear</button>
+        <button type="click" id="pet-button" class="btn btn-success" name="pet">Pet Bear</button>
+        <button type="click" id="sleep-button" class="btn btn-success" name="sleep">Hibernate</button>
 
-      <p>Food Level: <span id="food-display"></span></p>
-      <p>Mood Level: <span id="mood-display"></span></p>
-      <p>Energy Level: <span id="energy-display"></span></p>
+        <p>Food Level: <span id="food-display"></span></p>
+        <p>Mood Level: <span id="mood-display"></span></p>
+        <p>Energy Level: <span id="energy-display"></span></p>
 
-      <img src="http://clipartmag.com/images/koala-clipart-free-31.png" alt="picture of honeycomb">
-    </div>
+        <img src="http://clipartmag.com/images/koala-clipart-free-31.png" alt="picture of honeycomb">
+      </div>
 
-    <div class="game-over">
-      <h1>GAME OVER</h1>
-      <h1>Play Again?</h1>
-    </div>
+      <div class="game-over">
+        <h1>GAME OVER</h1>
+        <h1>Play Again?</h1>
+        <span id="die-gif"></span>
+      </div>
 
     </div>
   </body>
-</html>
+  </html>

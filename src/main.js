@@ -10,6 +10,25 @@ $(document).ready(function() {
 
     $('form#bear-form').trigger("reset");
 
+    let request = new XMLHttpRequest();
+    const url = 'http://api.giphy.com/v1/gifs/random?api_key=m9fH4jBmiZbnscx9MUlcSn6lXL4ABkMp';
+
+    request.onreadystatechange = function() {
+      if (this.readyState === 4 && this.status === 200) {
+        const response = JSON.parse(this.responseText);
+        getGifs(response);
+      }
+    }
+
+    request.open("GET", url, true);
+    request.send();
+
+    const getGifs = function (response) {
+      $('#die-gif').html(`<img src=${response.data.images.original.url}>`);
+      console.log(response);
+    }
+
+
     let bearName = $('#inputted-name').val();
     let newBear = new FuzzyWuzzy(bearName);
     console.log(newBear);

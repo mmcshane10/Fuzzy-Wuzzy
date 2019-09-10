@@ -9,6 +9,7 @@ body {
   background-image: url("http://i1.wp.com/clipartportal.com/wp-content/uploads/2018/12/cartoon-forest-clipart-4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  text-align: center;
 }
 
 .container {
@@ -20,6 +21,10 @@ label {
   color: white;
   font-family: 'Amatic SC', cursive;
   font-size: 30px;
+}
+
+form {
+ display: inline-block;
 }
 
 button {
